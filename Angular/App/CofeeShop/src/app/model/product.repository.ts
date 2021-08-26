@@ -26,6 +26,10 @@ export class ProductsRepository {
         return this.products.filter(p => cat_id == null || p.category);
     }
 
+    //Get all products
+    getProducts(): Product[] {
+        return this.products;
+    }
     //Get Product by id
     getProduct(id: number): Product {
         return this.products.find(p => p.id == id);
