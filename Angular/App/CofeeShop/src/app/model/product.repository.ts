@@ -21,8 +21,9 @@ export class ProductsRepository {
     //Get Products by Category
     getProductsByCategory(category: string=null): Product[] {
         //get category id by category string
+        let cat_id = (this.categories.find(cat => cat.name === category)).id
         //filter products by category id
-        return this.products;
+        return this.products.filter(p => cat_id == null || p.category);
     }
 
     //Get Product by id
@@ -33,7 +34,7 @@ export class ProductsRepository {
     //Get all categories
     getCategories(): string[] {
         //enumerate categories, get name, return to string array
-        return [];
+        return this.categories.map(c => c.name);
     }
     
 }
