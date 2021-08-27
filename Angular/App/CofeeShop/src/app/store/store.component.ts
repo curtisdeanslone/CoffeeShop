@@ -7,11 +7,15 @@ import { ProductsRepository } from "../model/product.repository";
 })
 
 export class StoreComponent {
+    public selectedCategory = "home";
     constructor (private repository: ProductsRepository) { }
     get products(): Product[] {
-        return this.repository.getProducts();
+        return this.repository.getProductsByCategory(this.selectedCategory);
     }
     get categories(): string[] {
         return this.repository.getCategories();
+    }
+    changeCategory(newCategory?: string) {
+        this.selectedCategory = newCategory;
     }
 }

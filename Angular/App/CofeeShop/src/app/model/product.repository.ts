@@ -19,11 +19,15 @@ export class ProductsRepository {
 
 
     //Get Products by Category
-    getProductsByCategory(category: string=null): Product[] {
+    getProductsByCategory(category: string="home"): Product[] {
         //get category id by category string
-        let cat_id = (this.categories.find(cat => cat.name === category)).id
+        let cat_id;
+        if (category != "home"){
+            cat_id = ((this.categories).find(c => c.name == category)).id;
+        }
         //filter products by category id
-        return this.products.filter(p => cat_id == null || p.category);
+        // return (this.products).filter(p => cat_id == null || cat_id == p.category);
+        return (category == "home"? this.products : (this.products).filter(p => cat_id == null || cat_id == p.category) );
     }
 
     //Get all products
