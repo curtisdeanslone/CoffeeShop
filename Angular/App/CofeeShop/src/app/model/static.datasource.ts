@@ -13,7 +13,7 @@ export class StaticDataSource {
         new Product(
             (this.data.products[0]).id,
             (this.data.products[0]).title,
-            (this.data.products[0]).desription,
+            (this.data.products[0]).description,
             (this.data.products[0]).price,
             (this.data.products[0]).country,
             (this.data.products[0]).category,
@@ -23,7 +23,7 @@ export class StaticDataSource {
         new Product(
             (this.data.products[1]).id,
             (this.data.products[1]).title,
-            (this.data.products[1]).desription,
+            (this.data.products[1]).description,
             (this.data.products[1]).price,
             (this.data.products[1]).country,
             (this.data.products[1]).category,
@@ -33,7 +33,7 @@ export class StaticDataSource {
         new Product(
             (this.data.products[2]).id,
             (this.data.products[2]).title,
-            (this.data.products[2]).desription,
+            (this.data.products[2]).description,
             (this.data.products[2]).price,
             (this.data.products[2]).country,
             (this.data.products[2]).category,
@@ -43,7 +43,7 @@ export class StaticDataSource {
         new Product(
             (this.data.products[3]).id,
             (this.data.products[3]).title,
-            (this.data.products[3]).desription,
+            (this.data.products[3]).description,
             (this.data.products[3]).price,
             (this.data.products[3]).country,
             (this.data.products[3]).category,
@@ -53,7 +53,7 @@ export class StaticDataSource {
         new Product(
             (this.data.products[4]).id,
             (this.data.products[4]).title,
-            (this.data.products[4]).desription,
+            (this.data.products[4]).description,
             (this.data.products[4]).price,
             (this.data.products[4]).country,
             (this.data.products[4]).category,
@@ -63,7 +63,7 @@ export class StaticDataSource {
         new Product(
             (this.data.products[5]).id,
             (this.data.products[5]).title,
-            (this.data.products[5]).desription,
+            (this.data.products[5]).description,
             (this.data.products[5]).price,
             (this.data.products[5]).country,
             (this.data.products[5]).category,
@@ -73,7 +73,7 @@ export class StaticDataSource {
         new Product(
             (this.data.products[6]).id,
             (this.data.products[6]).title,
-            (this.data.products[6]).desription,
+            (this.data.products[6]).description,
             (this.data.products[6]).price,
             (this.data.products[6]).country,
             (this.data.products[6]).category,
@@ -83,7 +83,7 @@ export class StaticDataSource {
         new Product(
             (this.data.products[7]).id,
             (this.data.products[7]).title,
-            (this.data.products[7]).desription,
+            (this.data.products[7]).description,
             (this.data.products[7]).price,
             (this.data.products[7]).country,
             (this.data.products[7]).category,
@@ -93,7 +93,7 @@ export class StaticDataSource {
         new Product(
             (this.data.products[8]).id,
             (this.data.products[8]).title,
-            (this.data.products[8]).desription,
+            (this.data.products[8]).description,
             (this.data.products[8]).price,
             (this.data.products[8]).country,
             (this.data.products[8]).category,
