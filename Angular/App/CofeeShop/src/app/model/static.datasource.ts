@@ -2,7 +2,10 @@ import { Injectable } from "@angular/core";
 import { Product } from "./product.model";
 import { Category } from "./category.model";
 import { Observable, from } from "rxjs";
+import { Order } from "./order.model";
 import * as db from  "../../../data.js";
+import { User } from "./user.model";
+import { UserAddress } from "./userAdress.model";
 
 
 
@@ -101,6 +104,7 @@ export class StaticDataSource {
             (this.data.products[8]).inventory,
             )
     ];
+
     private categories: Category[] = [
         new Category (
             (this.data.product_category[0]).id,
@@ -118,6 +122,77 @@ export class StaticDataSource {
             (this.data.product_category[2]).description,
         )
     ];
+
+    private users: User[] = [
+        new User(
+            (this.data.users[0]).id,
+            (this.data.users[0]).username,
+            (this.data.users[0]).first_name,
+            (this.data.users[0]).last_name
+            ),
+        new User(
+            (this.data.users[1]).id,
+            (this.data.users[1]).username,
+            (this.data.users[1]).first_name,
+            (this.data.users[1]).last_name
+            ),
+        new User(
+            (this.data.users[2]).id,
+            (this.data.users[2]).username,
+            (this.data.users[2]).first_name,
+            (this.data.users[2]).last_name
+            ),
+        new User(
+            (this.data.users[3]).id,
+            (this.data.users[3]).username,
+            (this.data.users[3]).first_name,
+            (this.data.users[3]).last_name
+            ),
+        
+    ];
+
+    private userAdresses: UserAddress[] = [
+        new UserAddress(
+            (this.data.user_address[0]).id,
+            (this.data.user_address[0]).user_id,
+            (this.data.user_address[0]).address_line1,
+            (this.data.user_address[0]).address_line2,
+            (this.data.user_address[0]).city,
+            (this.data.user_address[0]).state,
+            (this.data.user_address[0]).postal_code,
+            (this.data.user_address[0]).telephone
+        ),
+        new UserAddress(
+            (this.data.user_address[1]).id,
+            (this.data.user_address[1]).user_id,
+            (this.data.user_address[1]).address_line1,
+            (this.data.user_address[1]).address_line2,
+            (this.data.user_address[1]).city,
+            (this.data.user_address[1]).state,
+            (this.data.user_address[1]).postal_code,
+            (this.data.user_address[1]).telephone
+        ),
+        new UserAddress(
+            (this.data.user_address[2]).id,
+            (this.data.user_address[2]).user_id,
+            (this.data.user_address[2]).address_line1,
+            (this.data.user_address[2]).address_line2,
+            (this.data.user_address[2]).city,
+            (this.data.user_address[2]).state,
+            (this.data.user_address[2]).postal_code,
+            (this.data.user_address[2]).telephone
+        ),
+        new UserAddress(
+            (this.data.user_address[3]).id,
+            (this.data.user_address[3]).user_id,
+            (this.data.user_address[3]).address_line1,
+            (this.data.user_address[3]).address_line2,
+            (this.data.user_address[3]).city,
+            (this.data.user_address[3]).state,
+            (this.data.user_address[3]).postal_code,
+            (this.data.user_address[3]).telephone
+        )
+    ];
         
     getProducts(): Observable<Product[]> {
         return from([this.products]);
@@ -125,6 +200,11 @@ export class StaticDataSource {
     
     getCategories(): Observable<Category[]> {
         return from([this.categories]);
+    }
+
+    saveOrder(order: Order): Observable<Order> {
+        console.log(JSON.stringify(order));
+        return from([order]);
     }
 
 }

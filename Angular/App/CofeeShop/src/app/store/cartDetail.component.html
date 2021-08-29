@@ -26,7 +26,7 @@
                         <td>
                             <input type="number" class="form-control-sm" style="width:5em" [value]="line.quantity" (change)="cart.updateQuantity(line.product, $event.target.value)" />
                         </td>
-                        <td>{{line.product.name}}</td>
+                        <td>{{line.product.title}}</td>
                         <td class="text-right">
                             {{line.product.price | currency:"USD":"symbol":"2.2-2"}}
                         </td>

@@ -109,6 +109,84 @@ module.exports = function () {
                     name: "mug",
                     description: "Your morning chalice of choice"
                 }
+            ],
+            users: [
+                {
+                    id: 1,
+                    username: "timmy2",
+                    password: "passhash",
+                    first_name: "Timothy",
+                    last_name: "Tooth",
+                },
+                {
+                    id: 2,
+                    username: "stevey1der",
+                    password: "passhash",
+                    first_name: "Steven",
+                    last_name: "Wright",
+                },
+                {
+                    id: 3,
+                    username: "danny_da_kid",
+                    password: "passhash",
+                    first_name: "Daniel",
+                    last_name: "Smith",
+                },
+                {
+                    id: 4,
+                    username: "T_How",
+                    password: "passhash",
+                    first_name: "Terrence",
+                    last_name: "Howard",
+                    
+                }
+            ],
+
+            user_address: [
+                {
+                    id:1,
+                    user_id:1,
+                    address_line1: "1234 West ln",
+                    address_line2: "",
+                    city: "Tampa",
+                    state: "FL",
+                    postal_code: "45687",
+                    telephone: "910-353-6734"
+                    
+                },
+                {
+                    id:2,
+                    user_id:2,
+                    address_line1: "4568 East Murdoc ln",
+                    address_line2: "",
+                    city: "Mendon",
+                    state: "MI",
+                    postal_code: "28746",
+                    telephone: "910-354-9734"
+                    
+                },
+                {
+                    id:3,
+                    user_id:3,
+                    address_line1: "67 E Ave",
+                    address_line2: "APT B",
+                    city: "Raleigh",
+                    state: "NC",
+                    postal_code: "90796",
+                    telephone: "919-253-6734"
+                    
+                },
+                {
+                    id:4,
+                    user_id:4,
+                    address_line1: "East MLK BLVD",
+                    address_line2: "Bldg 2387",
+                    city: "Austin",
+                    state: "TX",
+                    postal_code: "90796",
+                    telephone: "7121-123-3734"
+                    
+                },
             ]
         }
     }
