@@ -21,4 +21,8 @@ export class UsersRepository {
     getUserAddressByUserId(user: number): UserAddress {
         return this.userAddresses.find(uA => uA.user_id == user);
     }
+
+    getUserById(user: number): User {
+        return this.users.find(u => u.id == user);
+    }
 }

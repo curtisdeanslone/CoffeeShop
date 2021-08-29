@@ -1,22 +1,55 @@
 <div class="container-fluid">
     <div class="row">
-        <div class="col bg-dark text-white">
-            <a class="navbar-brand">Coffee Shop</a>
-        </div>
+      <div class="col bg-dark text-white">
+        <a class="navbar-brand">SPORTS STORE</a>
+      </div>
     </div>
-</div>
-<div *ngIf="orderSent" class="m-2 text-center">
+  </div>
+  
+  <div *ngIf="orderSent" class="m-2 text-center">
     <h2>Thanks!</h2>
-    <p> Your coffee and coffee accessories will be oming to wake you up soon!</p>
-    <p>We'll be shipping your goods as soon as possible</p>
-    <button class="btn-btn-primary" routerLink="/store">Return to Shop</button>
-</div>
-<form *ngIf="!orderSent" #form="ngForm" novalidate (ngSubmit)="submitOrder(form)" class="m-2">
+    <p>Thanks for placing your order.</p>
+    <p>We'll ship your goods as soon as possible.</p>
+    <button class="btn btn-primary" routerLink="/store">Return to Store</button>
+  </div>
+  <form *ngIf="!orderSent" #form="ngForm" novalidate
+        (ngSubmit)="submitOrder(form)" class="m-2">
     <div class="form-group">
-        <label> Name: </label>
-        <input class="form-control" #id="ngModel" name="name" [(ngModel)]="order.id" required />
-        <span *ngIf="submitted" class="text-danger">
-
-        </span>
+      <label>First Name</label>
+      <input class="form-control" #firstName="ngModel" name="firstName"
+              [(ngModel)]="user.first_name" required />
     </div>
-</form>
+    <div class="form-group">
+        <label>Last Name</label>
+        <input class="form-control" #lastName="ngModel" name="lastName"
+                [(ngModel)]="user.last_name" required />
+      </div>
+    <div class="form-group">
+      <label>Address</label>
+      <input class="form-control" #address="ngModel" name="address"
+              [(ngModel)]="userAddress.address_line1" required />
+      
+    </div>
+    <div class="form-group">
+      <label>City</label>
+      <input class="form-control" #city="ngModel" name="city"
+              [(ngModel)]="userAddress.city" required />
+     
+    </div>
+    <div class="form-group">
+      <label>State</label>
+      <input class="form-control" #state="ngModel" name="state"
+              [(ngModel)]="userAddress.state" required />
+    </div>
+    <div class="form-group">
+      <label>Zip/Postal Code</label>
+      <input class="form-control" #zip="ngModel" name="zip"
+              [(ngModel)]="userAddress.postal_code" required />
+      
+    </div>
+    <div class="text-center">
+      <button class="btn btn-secondary m-1" routerLink="/cart">Back</button>
+      <button class="btn btn-primary m-1" type="submit">Complete Order</button>
+    </div>
+  </form>
+  
