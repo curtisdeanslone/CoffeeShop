@@ -14,6 +14,7 @@ const PORT = 3500
 @Injectable()
 export class RestDataSource {
     baseUrl: string;
+
     constructor(private http: HttpClient) {
         this.baseUrl = `${PROTOCOL}://${location.hostname}:${PORT}/`;
     }
@@ -23,7 +24,7 @@ export class RestDataSource {
     }
 
     getCategories(): Observable<Category[]> {
-        return this.http.get<Category[]>(this.baseUrl + "categories");
+        return this.http.get<Category[]>(this.baseUrl + "product_category");
     }
 
     saveOrder(order: Order): Observable<Order> {
