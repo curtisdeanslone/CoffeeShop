@@ -1,0 +1,22 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col bg-dark text-white">
+            <a class="navbar-brand">Coffee Shop</a>
+        </div>
+    </div>
+</div>
+<div *ngIf="orderSent" class="m-2 text-center">
+    <h2>Thanks!</h2>
+    <p> Your coffee and coffee accessories will be oming to wake you up soon!</p>
+    <p>We'll be shipping your goods as soon as possible</p>
+    <button class="btn-btn-primary" routerLink="/store">Return to Shop</button>
+</div>
+<form *ngIf="!orderSent" #form="ngForm" novalidate (ngSubmit)="submitOrder(form)" class="m-2">
+    <div class="form-group">
+        <label> Name: </label>
+        <input class="form-control" #id="ngModel" name="name" [(ngModel)]="order.id" required />
+        <span *ngIf="submitted" class="text-danger">
+
+        </span>
+    </div>
+</form>

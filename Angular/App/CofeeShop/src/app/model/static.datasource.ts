@@ -202,6 +202,14 @@ export class StaticDataSource {
         return from([this.categories]);
     }
 
+    getUsers(): Observable<User[]> {
+        return from([this.users]);
+    }
+
+    getUserAddresses(): Observable<UserAddress[]> {
+        return from([this.userAdresses]);
+    }
+
     saveOrder(order: Order): Observable<Order> {
         console.log(JSON.stringify(order));
         return from([order]);
