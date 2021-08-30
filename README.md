@@ -4,14 +4,6 @@
 ## FrameWork Builds
 
 ## Angular
-### Database: MongoDb
-
-## Vue.js
-### Database: Couch
-
-## Ruby On Rails
-
-## Django
 
 
 #Database Structure

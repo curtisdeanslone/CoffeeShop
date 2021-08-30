@@ -6,7 +6,7 @@ import { Router } from "@angular/router";
     templateUrl: "auth.component.html"
 })
 
-export class AuthComponenet {
+export class AuthComponent {
     public username: string;
     public password: string;
     public errorMessage: string;
