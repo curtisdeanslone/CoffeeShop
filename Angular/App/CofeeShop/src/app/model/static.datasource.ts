@@ -128,25 +128,29 @@ export class StaticDataSource {
             (this.data.users[0]).id,
             (this.data.users[0]).username,
             (this.data.users[0]).first_name,
-            (this.data.users[0]).last_name
+            (this.data.users[0]).last_name,
+            (this.data.users[0]).account_type
             ),
         new User(
             (this.data.users[1]).id,
             (this.data.users[1]).username,
             (this.data.users[1]).first_name,
-            (this.data.users[1]).last_name
+            (this.data.users[1]).last_name,
+            (this.data.users[1]).account_type
             ),
         new User(
             (this.data.users[2]).id,
             (this.data.users[2]).username,
             (this.data.users[2]).first_name,
-            (this.data.users[2]).last_name
+            (this.data.users[2]).last_name,
+            (this.data.users[2]).account_type
             ),
         new User(
             (this.data.users[3]).id,
             (this.data.users[3]).username,
             (this.data.users[3]).first_name,
-            (this.data.users[3]).last_name
+            (this.data.users[3]).last_name,
+            (this.data.users[3]).account_type
             ),
         
     ];
