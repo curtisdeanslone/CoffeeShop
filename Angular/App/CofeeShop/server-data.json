@@ -91,7 +91,7 @@
             "inventory": 10
         }
     ],
-    "product_category": [
+    "product_categories": [
         {
             "id": 1,
             "name": "coffee",
@@ -145,7 +145,7 @@
         }
     ],
 
-    "user_address": [
+    "user_addresses": [
         {
             "id":1,
             "user_id":1,
@@ -190,6 +190,7 @@
             "telephone": "7121-123-3734"
             
         }
-    ]
+    ],
+    "orders": []
 }
 

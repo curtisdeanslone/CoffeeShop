@@ -1,6 +1,0 @@
-##
-Adjust components to accept all models.
-
-Products & Categories
-
-Add User categories and adjust admin component to authorize only admin categorized users
