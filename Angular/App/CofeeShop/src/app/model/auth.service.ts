@@ -5,6 +5,7 @@ import { RestDataSource } from "../model/rest.datasource";
 @Injectable()
 export class AuthService {
     constructor(private dataSource: RestDataSource) { }
+    
     authenticate(username: string, password: string): Observable<boolean> {
         return this.dataSource.authenticate(username,password);
     }

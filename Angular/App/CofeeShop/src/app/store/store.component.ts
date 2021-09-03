@@ -47,6 +47,7 @@ export class StoreComponent {
    //add Product to Cart
    addProductToCart(product: Product) {
        this.cart.addLine(product);
+       //this.router.navigateByUrl("/cart");
    }
 
 }

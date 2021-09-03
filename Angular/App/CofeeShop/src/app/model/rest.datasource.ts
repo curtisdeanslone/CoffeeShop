@@ -1,3 +1,7 @@
+/*
+RESTful Datasource:
+TODO: Connect User data based on orders
+*/
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http"
 import { Observable } from "rxjs";
@@ -19,8 +23,8 @@ export class RestDataSource {
     auth_token: string;
 
     constructor(private http: HttpClient) {
-        //this.baseUrl = `${PROTOCOL}://${location.hostname}:${PORT}/`;
-        this.baseUrl = "/api/"
+        this.baseUrl = `${PROTOCOL}://${location.hostname}:${PORT}/`;
+        // this.baseUrl = "/api/"
     }
 
     getProducts(): Observable<Product[]> {
@@ -28,7 +32,7 @@ export class RestDataSource {
     }
 
     getCategories(): Observable<Category[]> {
-        return this.http.get<Category[]>(this.baseUrl + "product_category");
+        return this.http.get<Category[]>(this.baseUrl + "product_categories");
     }
 
     saveOrder(order: Order): Observable<Order> {

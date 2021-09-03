@@ -6,7 +6,6 @@ export class Order {
     public id: number;
     public user_id: number;
     public total: number;
-    public payment_id: number;
     public shipped: boolean;
     constructor(public cart: Cart) { }
 
@@ -14,6 +13,5 @@ export class Order {
         this.id = null;
         this.user_id = null;
         this.total = null;
-        this.payment_id = null;
     }
 }

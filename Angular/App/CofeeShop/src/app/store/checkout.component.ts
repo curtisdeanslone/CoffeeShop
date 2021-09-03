@@ -17,11 +17,12 @@ export class CheckoutComponent {
     orderSent: boolean = false;
     submitted: boolean = false;
     user: User;
-    userAddress: UserAddress
+    userAddress: UserAddress;
     constructor(public repository: OrderRepository, public order: Order, public userRepo: UsersRepository){
         this.user = userRepo.getUserById(1);
         this.userAddress = userRepo.getUserAddressByUserId(1);
-     }
+    }
+
     submitOrder(form: NgForm) {
         this.submitted = true;
         if (form.valid) {
